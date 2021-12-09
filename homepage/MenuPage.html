@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+        <title>Mr A's TeaHouse</title>
+    </head>
+    <header>
+        <strong>Mr A's TeaHouse</strong>
+        <div id="topnav">
+          <a href="index.html" >Home</a>
+          <a href="MenuPage.html" id="active">Menu</a>
+          <a href="BlackTea.html">What is Black Tea?</a>
+          <a href="Contacts.html">Contact</a>
+          <br>
+        </div>
+    </header>
+    <div class="menuBody">
+        <div id="top"></div>
+        <table>
+            <tr class="title">
+                <th></th>
+                <th>Black teas</th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Earl Grey</td>
+                <td class="price"><input type="checkbox" value="3.50">$ 3.50</td>
+                <td class="price"><input type="checkbox" value="4.50">$ 4.50</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>English Breakfast</td>
+                <td class="price"><input type="checkbox" value="3.25">$ 3.25</td>
+                <td class="price"><input type="checkbox" value="4.25">$ 4.25</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Assam Tea</td>
+                <td class="price"><input type="checkbox" value="2.25">$ 2.25</td>
+                <td class="price"><input type="checkbox" value="3.25">$ 3.25</td>
+            </tr>
+            <tr class="title">
+                <th></th>
+                <th>Green Teas</th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Dragonwell Tea</td>
+                <td class="price"><input type="checkbox" value="6.25">$ 6.25</td>
+                <td class="price"><input type="checkbox" value="8.00">$ 8.00</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Sencha</td>
+                <td class="price"><input type="checkbox" value="2.50">$ 2.50</td>
+                <td class="price"><input type="checkbox" value="3.15">$ 3.00</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Matcha</td>
+                <td class="price"><input type="checkbox" value="2.00">$ 2.00</td>
+                <td class="price"><input type="checkbox" value="3.00">$ 3.00</td>
+            </tr>
+            <tr class="title">
+                <th></th>
+                <th>Other Teas</th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Rooibos Tea</td>
+                <td class="price"><input type="checkbox" value="3.50">$ 3.50</td>
+                <td class="price"><input type="checkbox" value="4.50">$ 4.50</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Peppermint Tea</td>
+                <td class="price"><input type="checkbox" value="3.25">$ 3.25</td>
+                <td class="price"><input type="checkbox" value="4.25">$ 4.25</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Hibiscus Tea</td>
+                <td class="price"><input type="checkbox" value="3.15">$ 3.15</td>
+                <td class="price"><input type="checkbox" value="4.15">$ 4.15</td>
+            </tr>
+            <tr id="totalRow">
+                <td>&nbsp;</td>
+                <td>Total</td>
+                <td style="text-align:center;"><input type="button" value="Submit" onclick="msg()"></td>
+                <td id="total" style="">$ 0.00</td>
+            </tr>
+        </table>
+        <div id = "bottom"></div>
+        <script>
+            var sum = 0;
+            $('.price :checkbox').click(function() {
+            sum = 0;
+            $('.price :checkbox:checked').each(function(index, element) {
+                sum += parseFloat(element.value);
+                
+            });
+            console.log(sum)
+            $('#total').html("$ " + sum.toFixed(2));});
+            
+            function msg() {
+              alert("Your total is: $" + sum.toFixed(2));
+            }
+        </script>
+    </div>
+    <footer>
+        <p> <br>
+            Created by: A.M.A.L. <br>
+            <br>
+        </p>
+    </footer>
+</html>

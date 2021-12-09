@@ -1,0 +1,177 @@
+html, body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+
+}
+
+header {
+    color: white;
+    background: black;
+    text-align: center;
+    font-size:2rem;
+    margin: auto ;
+    font-family: Arial;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+#topnav {
+    background: grey;
+    height: auto ;
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+
+
+#topnav a{
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 10px;
+    font-size:0.9rem;
+    text-decoration: none;
+}
+
+#active {
+  background-color: #1e66d9;
+  color: #a1c5ff;
+}
+a:hover {
+  color: #a1c5ff;
+}
+
+table {font-size:1rem;}
+input[type=checkbox]{
+    width: 10px;
+    height: 10px;
+}
+
+#total {
+    text-align:left;
+
+}
+
+.paragraph {
+    font-size: 1rem;
+}
+
+
+body {
+    margin-top: 160px;
+    background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F06%2F22%2Fdifferent-types-of-tea-FT-BLOG0621.jpg&q=85");
+    background-size: cover;
+    position: relative;
+
+
+}
+
+
+.menuBody {
+    background-color: white;
+    
+    width: auto;
+    border-radius: 15px;
+    padding: 0px 0px;
+    margin-bottom: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+#totalRow{
+    background-color: #ADD8E6;
+}
+
+#top{
+    width: 100%;
+    height: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #ADD8E6;
+}
+
+table {
+
+    color: black;
+    width: 100%;
+}
+
+.title {
+    background-color: #ADD8E6;
+}
+
+.know {
+    background-color: white;
+    border-radius: 15px;
+    width: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:20px;
+    align-items:center;
+    justify-content: center;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+figcaption{
+    font-size: 2rem;
+}
+
+footer {
+    color: white;
+    background: black;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    height: 70px;
+
+}
+#bottom{
+    width: 100%;
+    height: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ADD8E6;
+}
+
+@media (min-width: 544px) {
+  table {font-size:1.5rem;}
+  input[type=checkbox]{width: 13px;height: 13px;}
+  #topnav a{font-size:1rem;}
+
+}
+
+@media (min-width: 768px) {
+  table {font-size:2rem;} /*1rem = 16px*/
+  input[type=checkbox]{width: 13px;height: 13px;}
+  #topnav {padding-top:5px;}
+  #topnav a{font-size:1.5rem;}
+}
+
+@media (min-width: 992px) {
+  table {font-size:2.5rem;} /*1rem = 16px*/
+  input[type=checkbox]{width: 20px;height: 20px;}
+  #topnav {padding-top: 5px; padding-bottom: 13px;}
+  #topnav a{font-size:2rem;}
+  header {font-size:2.8rem;}
+  .paragraph {font-size:1.8rem;}
+  .know {margin-top:170px;}
+}
+
+@media (min-width: 1400px) {
+  h1 {font-size:3rem;} /*1rem = 16px*/
+  input[type=checkbox]{width: 20px;height: 20px;}
+  #total {padding-right:70px;}
+  #topnav a{font-size:2rem;padding: 10px 30px;}
+  header {font-size:3rem;}
+  .know {margin-top:200px;}
+}
